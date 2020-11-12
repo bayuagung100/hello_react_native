@@ -159,26 +159,53 @@ class App extends Component {
     return (
       // <View> Seperti <div>
       <View>
+
         {/* <StatusBar> status bar nya handphone */}
         <StatusBar backgroundColor='blue' />
+
         {/* panggil class lain */}
         {/* person itu props */}
         {/* <Header person='person props dari App'/> */}
         {/* component bisa dipakein props lebih dari 1 */}
         <Header usia='22' />
         {/* end panggil class lain */}
-        <Text>Hello React Native</Text>
+
+        {/* style dari const styles*/}
+        <Text style={styles.header}>Hello React Native</Text>
+        {/* end style dari const styles*/}
+
         {/* tahun itu props */}
         <Footer tahun='2020' />
 
         <Button title='tambah buton' onPress={this.handleTambah} />
-        <Text>Jumlah : {this.state.jumlah}</Text>
+
+        {/* inline style */}
+        {/* <Text style={{color:'blue', marginTop: 20}} >Jumlah : {this.state.jumlah}</Text> */}
+        {/* end inline style */}
+
+        <Text style={styles.jumlah} >Jumlah : {this.state.jumlah}</Text>
+
       </View>
     )
   }
 }
 // end class component
 
+//style
+const styles = StyleSheet.create({
+  header: {
+    marginTop: 20,
+    fontSize: 20,
+    textAlign: 'center',
+  },
+  jumlah: {
+    marginTop: 20,
+    fontSize: 20,
+    textAlign: 'center',
+    color: 'red'
+  }
+})
+//end style
 
 // component (dalam 1 file)
 // class Header extends Component{
