@@ -158,33 +158,39 @@ class App extends Component {
   render() {
     return (
       // <View> Seperti <div>
-      <View>
+      // <View>
 
-        {/* <StatusBar> status bar nya handphone */}
-        <StatusBar backgroundColor='blue' />
+      //   {/* <StatusBar> status bar nya handphone */}
+      //   <StatusBar backgroundColor='blue' />
 
-        {/* panggil class lain */}
-        {/* person itu props */}
-        {/* <Header person='person props dari App'/> */}
-        {/* component bisa dipakein props lebih dari 1 */}
-        <Header usia='22' />
-        {/* end panggil class lain */}
+      //   {/* panggil class lain */}
+      //   {/* person itu props */}
+      //   {/* <Header person='person props dari App'/> */}
+      //   {/* component bisa dipakein props lebih dari 1 */}
+      //   <Header usia='22' />
+      //   {/* end panggil class lain */}
 
-        {/* style dari const styles*/}
-        <Text style={styles.header}>Hello React Native</Text>
-        {/* end style dari const styles*/}
+      //   {/* style dari const styles*/}
+      //   <Text style={styles.header}>Hello React Native</Text>
+      //   {/* end style dari const styles*/}
 
-        {/* tahun itu props */}
-        <Footer tahun='2020' />
+      //   {/* tahun itu props */}
+      //   <Footer tahun='2020' />
 
-        <Button title='tambah buton' onPress={this.handleTambah} />
+      //   <Button title='tambah buton' onPress={this.handleTambah} />
 
-        {/* inline style */}
-        {/* <Text style={{color:'blue', marginTop: 20}} >Jumlah : {this.state.jumlah}</Text> */}
-        {/* end inline style */}
+      //   {/* inline style */}
+      //   {/* <Text style={{color:'blue', marginTop: 20}} >Jumlah : {this.state.jumlah}</Text> */}
+      //   {/* end inline style */}
 
-        <Text style={styles.jumlah} >Jumlah : {this.state.jumlah}</Text>
+      //   <Text style={styles.jumlah} >Jumlah : {this.state.jumlah}</Text>
 
+      // </View>
+
+      //layouting
+      <View style={{flex:1, backgroundColor:'red', flexDirection:'row'}}>
+        <Text style={{flex:1, backgroundColor:'yellow', margin: 20,}}>Halaman 1</Text>
+        <Text style={{flex:2, backgroundColor:'green'}}>Halaman 2</Text>
       </View>
     )
   }
