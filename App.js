@@ -17,6 +17,7 @@ import {
 } from 'react-native';
 
 import Header from './Header';
+import Footer from './Footer';
 
 // import {
 //   Header,
@@ -116,14 +117,7 @@ import Header from './Header';
 // });
 
 
-// function
-// function App(){
-//   return (
-//     <View> 
-//       <Text>Hello React Native</Text>
-//     </View>
-//   );
-// };
+
 
 // basic component
 class App extends Component<props>{
@@ -137,6 +131,8 @@ class App extends Component<props>{
         <Header/>
         {/* end panggil class lain */}
         <Text>Hello React Native</Text>
+
+        <Footer/>
       </View>
     )
   }
@@ -151,5 +147,40 @@ class App extends Component<props>{
 //     )
 //   }
 // }
+// end component (dalam 1 file)
+
+// function component (dalam 1 file)
+// const Footer = () => {
+//   return(
+//     <View>
+//       <Text>
+//         Ini footer
+//       </Text>
+//     </View>
+//   )
+// }
+// atau
+// function Footer(){
+//   return (
+//     <View>
+//       <Text>
+//         Ini footer
+//       </Text>
+//     </View>
+//   );
+// };
+// atau
+// Footer = () => {
+//   var copyright = "@bayu";
+//   return(
+//     <View>
+//       <Text>
+//         Ini footer
+//       </Text>
+//       <Text>{copyright}</Text>
+//     </View>
+//   )
+// }
+// end function component (dalam 1 file)
 
 export default App;
