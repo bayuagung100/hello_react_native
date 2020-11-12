@@ -119,8 +119,27 @@ import Footer from './Footer';
 
 
 
-// basic component
-class App extends Component<props>{
+// class component
+//basic
+// class App extends Component<props>{
+//   render(){
+//     return(
+//       // <View> Seperti <div>
+//       <View>
+//         {/* <StatusBar> status bar nya handphone */}
+//         <StatusBar backgroundColor='blue'/>
+//         {/* panggil class lain */}
+//         <Header/>
+//         {/* end panggil class lain */}
+//         <Text>Hello React Native</Text>
+
+//         <Footer/>
+//       </View>
+//     )
+//   }
+// }
+// atau
+class App extends Component{
   render(){
     return(
       // <View> Seperti <div>
@@ -128,15 +147,19 @@ class App extends Component<props>{
         {/* <StatusBar> status bar nya handphone */}
         <StatusBar backgroundColor='blue'/>
         {/* panggil class lain */}
-        <Header/>
+        {/* person itu props */}
+        <Header person='person props dari App'/>
+        {/* component bisa dipakein props lebih dari 1 */}
+        <Header usia='22'/>
         {/* end panggil class lain */}
         <Text>Hello React Native</Text>
-
-        <Footer/>
+        {/* tahun itu props */}
+        <Footer tahun='2020'/>
       </View>
     )
   }
 }
+// end class component
 
 
 // component (dalam 1 file)
@@ -148,6 +171,7 @@ class App extends Component<props>{
 //   }
 // }
 // end component (dalam 1 file)
+
 
 // function component (dalam 1 file)
 // const Footer = () => {
