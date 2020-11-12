@@ -148,7 +148,7 @@ class App extends Component{
         <StatusBar backgroundColor='blue'/>
         {/* panggil class lain */}
         {/* person itu props */}
-        <Header person='person props dari App'/>
+        {/* <Header person='person props dari App'/> */}
         {/* component bisa dipakein props lebih dari 1 */}
         <Header usia='22'/>
         {/* end panggil class lain */}
