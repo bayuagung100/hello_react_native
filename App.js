@@ -6,7 +6,7 @@
  * @flow strict-local
  */
 
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import {
   SafeAreaView,
   StyleSheet,
@@ -14,6 +14,8 @@ import {
   View,
   Text,
   StatusBar,
+  Button,
+  Alert,
 } from 'react-native';
 
 import Header from './Header';
@@ -139,22 +141,38 @@ import Footer from './Footer';
 //   }
 // }
 // atau
-class App extends Component{
-  render(){
-    return(
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      jumlah: 0,
+    }
+  }
+
+  handleTambah = () => {
+    // Alert.alert('ini adalah alert dari tambah button');
+    this.setState({
+      jumlah: this.state.jumlah + 1,
+    })
+  }
+  render() {
+    return (
       // <View> Seperti <div>
       <View>
         {/* <StatusBar> status bar nya handphone */}
-        <StatusBar backgroundColor='blue'/>
+        <StatusBar backgroundColor='blue' />
         {/* panggil class lain */}
         {/* person itu props */}
         {/* <Header person='person props dari App'/> */}
         {/* component bisa dipakein props lebih dari 1 */}
-        <Header usia='22'/>
+        <Header usia='22' />
         {/* end panggil class lain */}
         <Text>Hello React Native</Text>
         {/* tahun itu props */}
-        <Footer tahun='2020'/>
+        <Footer tahun='2020' />
+
+        <Button title='tambah buton' onPress={this.handleTambah} />
+        <Text>Jumlah : {this.state.jumlah}</Text>
       </View>
     )
   }

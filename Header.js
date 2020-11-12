@@ -49,7 +49,9 @@ class Header extends Component {
                         this.setState({ inputan: events }) 
                     }} 
                 /> */}
-                <TextInput onChangeText={this.handleInput} placeholder="masukan inputan" value={this.state.inputan}/>
+                <TextInput onChangeText={this.handleInput} placeholder="masukan inputan" value={this.state.inputan} 
+                    keyboardType='numeric' //tipe keyboardnya
+                />
                 <Text>ini adalah text inputan: {this.state.inputan}</Text>
             </View>
         )
